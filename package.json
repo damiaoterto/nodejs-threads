@@ -6,12 +6,14 @@
   "author": "Francisco Damião Terto <hi@damiaojunior.me>",
   "license": "MIT",
   "scripts": {
+    "build": "rimraf dist && sucrase ./src -d ./dist --transforms imports",
     "start": "node dist/serve.js",
     "start:dev": "nodemon src/server.js",
     "start:debug": "nodemon --inspect src/server.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
     "sucrase": "^3.21.0"
   }
 }
